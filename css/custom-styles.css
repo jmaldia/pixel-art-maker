@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css?family=Kelly+Slab|Nixie+One');
+
+body {
+	margin: -10px 0 0 0;
+	padding: 0;
+	font-family: 'Nixie One', cursive;
+	font-weight: 100;
+	background-color: #c7ecee;
+	color: #30336b;
+}
+
+input, button {
+	padding: 10px;
+	font-size: 14px;
+	border-radius: 6px
+	border: 0;
+	text-align: center;
+	color: #CCCCCC;
+}
+
+#colorPicker {
+	width: 35px;
+}
+
+.header {
+	background-color: #7ed6df;
+}
+
+.header h1 {
+	font-family: 'Kelly Slab', cursive;
+	font-size: 50px;
+	padding: 40px;
+	color: #130f40;
+	font-weight: 10;
+}
+
+.menu {
+	background-color: #dff9fb;
+	margin: -10px 0 0 0;
+	padding: 30px;
+}
+
+.color-picker {
+	display: inline-block;
+	margin-right: 20px;
+	margin-left: 20px;
+}
+
+.grid-input {
+	display: inline-block;
+	margin-right: 20px;
+	margin-left: 20px;
+	display:inline-block;
+}
+
+.color-picker h2, .grid-input h2 {
+	font-size: 18px;
+	font-weight: 700;
+}
+
+.color-picker h2, .color-picker input, .grid-input h2, .grid-input form {
+	display:inline;
+}
+
+#button, #reset {
+	margin-left: 15px;
+	border: 0;
+	border-radius: 2px
+}
+
+#button {
+	background-color: #6ab04c;
+}
+
+#reset {
+	background-color: #eb4d4b;
+}
+
+button {
+	font-size: 18px;
+	color: #FFFFFF;
+}
+
+
+.design-canvas, #pixelCanvas {
+	margin-top: 40px;
+}
+
+table, td, tr {
+	border: 0;
+}
+
+.white {
+	background-color: #FFFFFF;
+}
+
+.grey {
+	background-color: #CCCCCC;
+}

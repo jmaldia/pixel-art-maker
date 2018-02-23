@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset=utf-8>
+
+    <title>Pixel Art Maker!</title>
+    
+    <!-- Google Fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Monoton">
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/custom-styles.css">
+</head>
+<body>
+    <div class="header">
+        <h1>Pixel Art Maker</h1>
+    </div>
+
+    <div class="menu">
+        <div class="color-picker">
+            <h2>Pick A Color</h2>
+            <input type="color" id="colorPicker">
+        </div>
+
+        <div class="grid-input">
+            <h2>Choose Grid Size</h2>
+            <form id="sizePicker">
+                <input type="number" id="inputWidth" name="width" min="1" placeHolder="Width" value="30">
+                <input type="number" id="inputHeight" name="height" min="1" max="75" placeHolder="Height" value="30">
+                <button type="button" id="button">Create</button>
+                <button type="button" id="reset">Reset</button>
+            </form>
+        </div>
+    </div>
+
+    
+
+    <div class="design-canvas">
+        <h2>Design Canvas</h2>
+        <table id="pixelCanvas"></table>
+    </div>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="js/designs.js"></script>
+</body>
+</html>

@@ -6,3 +6,7 @@ This project was originally in this repo: [https://github.com/jmaldia/Grow-with-
 For previous commits on this project, please go here: 
 
 [https://github.com/jmaldia/Grow-with-Google-Udacity-Exercises/commits/master](https://github.com/jmaldia/Grow-with-Google-Udacity-Exercises/commits/master)
+
+You can find a live preview here: 
+
+[https://codepen.io/jonmaldia/full/bLjpBN/](https://codepen.io/jonmaldia/full/bLjpBN/)

@@ -17,6 +17,7 @@
 * TODO: Save option
 */
 
+
 // When size is submitted by the user, call makeGrid()
 // This function creates a grid based on the Height and Width inputs
 function makeGrid(inputWidth, inputHeight) {
@@ -49,21 +50,24 @@ function reset(gridWidth, gridHeight) {
 }
 
 $(document).ready(function() {
+	// jQuery variables
+	const sizePicker = $("#sizePicker");
+
 	// Variables for color and size input
-	let gridWidth = $("#sizePicker").find("input[name='height']").val();//$(inputWidth);
-	let gridHeight = $("#sizePicker").find("input[name='width']").val();//$(inputHeight);
+	let gridWidth = sizePicker.find("input[name='height']").val();//$(inputWidth);
+	let gridHeight = sizePicker.find("input[name='width']").val();//$(inputHeight);
 	let gridColor = "#000000";
 
 	// Create initial grid
-	reset(gridWidth, gridHeight);
+	makeGrid(gridWidth, gridHeight);
 
 	// Listener for the create/submit button
 	// This grabs the width and height from the user and replaces the existing grid
 	$('#button').on('click', function() {
     	event.preventDefault();
 
-    	gridHeight = $("#sizePicker").find("input[name='width']").val();//$(inputHeight);
-		gridWidth = $("#sizePicker").find("input[name='height']").val();//$(inputWidth);
+    	gridHeight = sizePicker.find("input[name='width']").val();//$(inputHeight);
+		gridWidth = sizePicker.find("input[name='height']").val();//$(inputWidth);
 
 		reset(gridWidth, gridHeight);
 	});
@@ -84,8 +88,3 @@ $(document).ready(function() {
 		$(this).css({'background-color': gridColor});
 	});
 });
-
-
-
-
-

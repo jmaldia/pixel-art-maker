@@ -56,7 +56,7 @@ $(document).ready(function() {
 	// Variables for color and size input
 	let gridWidth = sizePicker.find("input[name='height']").val();//$(inputWidth);
 	let gridHeight = sizePicker.find("input[name='width']").val();//$(inputHeight);
-	let gridColor = "#000000";
+	let gridColor = "#7ed6df";
 
 	// Create initial grid
 	makeGrid(gridWidth, gridHeight);

@@ -17,6 +17,9 @@
 * TODO: Save option
 */
 
+// jQuery variables
+const sizePicker = $("#sizePicker");
+const pixelCanvas = $('#pixelCanvas');
 
 // When size is submitted by the user, call makeGrid()
 // This function creates a grid based on the Height and Width inputs
@@ -38,7 +41,7 @@ function makeGrid(inputWidth, inputHeight) {
 		}
 		table += "</tr>";
 	}
-	$('#pixelCanvas').append(table);
+	pixelCanvas.append(table);
 }
 
 // Resets the canvas to default
@@ -50,9 +53,6 @@ function reset(gridWidth, gridHeight) {
 }
 
 $(document).ready(function() {
-	// jQuery variables
-	const sizePicker = $("#sizePicker");
-
 	// Variables for color and size input
 	let gridWidth = sizePicker.find("input[name='height']").val();//$(inputWidth);
 	let gridHeight = sizePicker.find("input[name='width']").val();//$(inputHeight);
@@ -84,7 +84,9 @@ $(document).ready(function() {
 
 	// Uses event delegation so that all tds classes (even ones created after the DOM loads) are affected
 	// Changes color to current color when mouse hovers on td
-	$('#pixelCanvas').on('mouseover', 'td', function() {
-		$(this).css({'background-color': gridColor});
+	pixelCanvas.on('mousedown mouseover', 'td', function(event) {
+		if(event.buttons == 1){
+			$(this).css({'background-color': gridColor});
+		}
 	});
 });

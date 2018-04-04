@@ -148,12 +148,16 @@ $(document).ready(function() {
 		if(event.buttons == 1) {
 			console.log($(this).css('background-color'));
 			// Checks if cell is colored
-			if ($(this).hasClass('white') && $(this).css('background-color') != 'rgb(255, 255, 255)') {
+			if ($(this).hasClass('white') && $(this).hasClass('colored') && $(this).css('background-color') != 'rgb(255, 255, 255)') {
+				$(this).css({'background-color': gridColor}).removeClass('colored');
+			} else if ($(this).hasClass('grey') && $(this).hasClass('colored') && $(this).css('background-color') != 'rgb(220, 221, 225)') {
+				$(this).css({'background-color': gridColor}).removeClass('colored');
+			} else if ($(this).hasClass('white') && $(this).css('background-color') != 'rgb(255, 255, 255)') {
 				$(this).css({'background-color': '#ffffff'});
 			} else if ($(this).hasClass('grey') && $(this).css('background-color') != 'rgb(220, 221, 225)') {
 				$(this).css({'background-color': '#dcdde1'});
 			} else {
-				$(this).css({'background-color': gridColor});	
+				$(this).css({'background-color': gridColor}).addClass('colored');	
 			}
 		}
 	});

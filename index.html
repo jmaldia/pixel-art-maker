@@ -11,39 +11,118 @@
     <!-- Stylesheets -->
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/custom-styles.css">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.9/css/all.css" integrity="sha384-5SOiIsAziJl6AWe0HWRKTXlfcSHKmYV4RBF18PPJ173Kzn7jzMyFuTtk8JA7QQG1" crossorigin="anonymous">
 </head>
 <body>
     <div class="header">
-        <h1>Pixel Art Maker</h1>
+        <img src="img/tencadence-logo.svg" class="logo">
+        <p>Pixel Art Maker</p>
     </div>
 
-    <div class="menu">
-        <div class="color-picker">
-            <h2>Pick A Color</h2>
-            <input type="color" value="#7ed6df" id="colorPicker">
+    <div class="paint-area">
+        
+        <div class="menu">
+
+            <div class="label">
+                <h2>Canvas Size</h2>  
+            </div>
+            <div class="grid-input">
+                <!-- <h2>Choose Grid Size</h2> -->
+                <form class="forms" id="small">
+                    <input type="hidden" class="inputWidth-small" name="width" min="1" max="35" placeHolder="Width" value="10">
+                    <input type="hidden" class="inputHeight-small" name="height" min="1" max="35" placeHolder="Height" value="10">
+                    <button type="button" class="buttons blue-button" id="button-small">Small Canvas</button>
+                </form>
+
+                <form class="forms" id="medium">
+                    <input type="hidden" class="inputWidth-medium" name="width" min="1" max="35" placeHolder="Width" value="25">
+                    <input type="hidden" class="inputHeight-medium" name="height" min="1" max="35" placeHolder="Height" value="25">
+                    <button type="button" class="buttons blue-button" id="button-medium">Medium Canvas</button>
+                </form>
+
+
+                <form class="forms" id="large">
+                    <input type="hidden" class="inputWidth-large" name="width" min="1" max="35" placeHolder="Width" value="35">
+                    <input type="hidden" class="inputHeight-large" name="height" min="1" max="35" placeHolder="Height" value="35">
+                    <button type="button" class="buttons blue-button" id="button-large">Large Canvas</button>
+                </form>
+
+                <form class="forms" id="sizePicker">
+                    <div class="inputs">
+                        <input type="number" class="inputWidth input" name="width" min="1" max="35" placeHolder="Width">
+                        <input type="number" class="inputHeight input" name="height" min="1" max="35" placeHolder="Height">
+                    </div>
+                    <button type="button" class="buttons blue-button" id="button">Create Canvas</button>
+                    <button type="button" class="buttons red-button" id="reset">Reset Canvas</button>
+                </form>
+            </div>
+
+
+            
+
+            <div class="label">
+                <h2>Color</h2>  
+            </div>
+            <div class="color-picker">
+                <!-- <input type="color" value="#7ed6df" id="colorPicker"> -->
+                <div class="colors">
+                    <input class="color black" type="text" name="black" value="#1abc9c" >
+                    <input class="color concrete" type="text" name="concrete" value="#95a5a6" >
+                    <input class="color clouds" type="text" name="clouds" value="#ecf0f1" >
+                    <input class="color turquoise" type="text" name="turquoise" value="#1abc9c" >
+                    <input class="color emerald" type="text" name="emerald" value="#2ecc71" >
+                    <input class="color peter-river" type="text" name="peter-river" value="#3498db" >
+                    <input class="color amethyst" type="text" name="amethyst" value="#9b59b6" >
+                    <input class="color wet-asphalt" type="text" name="wet-asphalt" value="#34495e" >
+                    <input class="color sunflower" type="text" name="sunflower" value="#f1c40f" >
+                    <input class="color carrot" type="text" name="carrot" value="#e67e22" >
+                    <input class="color alizarin" type="text" name="alizarin" value="#e74c3c" >
+                </div>
+            </div>
+
+            <div class="label">
+                <h2>Clear Canvas</h2>  
+            </div>
+            <div class="erase-option">
+                <button type="button" class="buttons red-button" id="erase">Erase Your Artwork</button>
+            </div>
+
+            <div class="label">
+                <h2>Save as an Image <span style="color:#bdc3c7; font-weight: 100;">(Coming Soon)</span> </h2> 
+            </div>
+            <div class="save">
+                <button type="button" class="buttons grey-button" id="erase">Download Your Artwork</button>
+            </div>
+
         </div>
 
-        <div class="grid-input">
-            <h2>Choose Grid Size</h2>
-            <form id="sizePicker">
-                <input type="number" id="inputWidth" name="width" min="1" placeHolder="Width" value="30">
-                <input type="number" id="inputHeight" name="height" min="1" max="75" placeHolder="Height" value="30">
-                <button type="button" id="button">Create</button>
-                <button type="button" id="reset">Reset</button>
-            </form>
+
+
+        
+
+        <div class="design-canvas">
+            <!-- <h2>Design Canvas</h2> -->
+            <table id="pixelCanvas"></table>
         </div>
+            
+
     </div>
+
+    <div id="dialog-confirm" title="Reset the Entire Grid?">
+      <p><span class="ui-icon ui-icon-alert"></p>
+    
+        </span>This will clear all your work and cannot be recovered. Are you sure?</p>
+    </div>
+ 
 
     
-
-    <div class="design-canvas">
-        <h2>Design Canvas</h2>
-        <table id="pixelCanvas"></table>
-    </div>
 
     <!-- <button type="button" id="save">Save</button> -->
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <script src="js/designs.js"></script>
 </body>
 </html>

@@ -23,6 +23,8 @@ const small = $("#small");
 const medium = $("#medium");
 const large = $("#large");
 const pixelCanvas = $('#pixelCanvas');
+const savedImageBox = $('.saved-image-box');
+const saveButton = $('#save-button');
 let getCanvas = "";
 
 // When size is submitted by the user, call makeGrid()
@@ -69,26 +71,28 @@ function reset(gridWidth, gridHeight){
 
 
 // Download to image
-$('#save').on('click', function () {
-	html2canvas(element, {
+saveButton.on('click', function() {
+	html2canvas(pixelCanvas, {
 		onrendered: function (canvas) {
-			$('.save').append(canvas);
-			getCanvas = canvas;
+			// Creates a new link for download
+			let imgageData = canvas.toDataURL('image/png');
+			let newData = imgageData.replace(/^data:image\/png/, 'data:application/octet-stream');
+
+			// Displays a link for download
+			savedImageBox.empty();
+			savedImageBox.append('\<a href=\"' + newData + '\"\>click here to download\<\/a\>');
+			savedImageBox.css({'display': 'block'});
+			savedImageBox.fadeIn(200).fadeOut(100).fadeIn(200);
 		}
 	});
-
-	let imgageData = getCanvas.toDataURL("image/png");
-    // Now browser starts downloading it instead of just showing it
-    let newData = imgageData.replace(/^data:image\/png/, 'data:application/octet-stream');
-    $('#save').attr('download', 'your_artwork.png').attr('href', newData);
 });
 
 
 
 $(document).ready(function() {
 	// Variables for color and size input
-	let gridWidth = 15;//$(inputWidth);
-	let gridHeight = 15;//$(inputHeight);
+	let gridWidth = 15;
+	let gridHeight = 15;
 	let gridColor = "#000000";
 
 	// Create initial grid
@@ -98,24 +102,24 @@ $(document).ready(function() {
 	// This grabs the width and height from the user and replaces the existing grid
 	$('#button-small').on('click', function() {
 		event.preventDefault();
-		gridHeight = small.find("input[name='width']").val();//$(inputHeight);
-		gridWidth = small.find("input[name='height']").val();//$(inputWidth);
+		gridHeight = small.find("input[name='width']").val();
+		gridWidth = small.find("input[name='height']").val();
 
 		reset(gridWidth, gridHeight);
 	});
 
 	$('#button-medium').on('click', function() {
 		event.preventDefault();
-		gridHeight = medium.find("input[name='width']").val();//$(inputHeight);
-		gridWidth = medium.find("input[name='height']").val();//$(inputWidth);
+		gridHeight = medium.find("input[name='width']").val();
+		gridWidth = medium.find("input[name='height']").val();
 
 		reset(gridWidth, gridHeight);
 	});
 
 	$('#button-large').on('click', function() {
 		event.preventDefault();
-		gridHeight = large.find("input[name='width']").val();//$(inputHeight);
-		gridWidth = large.find("input[name='height']").val();//$(inputWidth);
+		gridHeight = large.find("input[name='width']").val();
+		gridWidth = large.find("input[name='height']").val();
 
 		reset(gridWidth, gridHeight);
 	});
@@ -146,7 +150,6 @@ $(document).ready(function() {
 	// Changes color to current color when mouse hovers on td
 	pixelCanvas.on('mousedown mouseover', 'td', function(event) {
 		if(event.buttons == 1) {
-			console.log($(this).css('background-color'));
 			// Checks if cell is colored
 			if ($(this).hasClass('white') && $(this).hasClass('colored') && $(this).css('background-color') != 'rgb(255, 255, 255)') {
 				$(this).css({'background-color': gridColor}).removeClass('colored');

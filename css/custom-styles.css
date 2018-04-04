@@ -95,7 +95,7 @@ table, td, tr {
 
 
 /*Palette*/
-.color-picker, .grid-input, .erase-option, .save {
+.color-picker, .grid-input, .erase-option, .save-box, .saved-image-box {
 	margin: 0;
 	width: 100%;
 	padding: 20px 15px 35px 15px;
@@ -245,8 +245,21 @@ button {
 }
 
 .colored {
-	
+
 }
+
+.saved-image-box {
+	display: none;
+	font-size: 18px;
+	font-weight: 800;
+	text-transform: uppercase;
+}
+
+.saved-image-box a {
+	font-family: arial;
+	color: #16a085!important;
+}
+
 
 
 

@@ -30,7 +30,6 @@ let getCanvas = "";
 // When size is submitted by the user, call makeGrid()
 // This function creates a grid based on the Height and Width inputs
 function makeGrid(inputWidth, inputHeight) {
-	event.preventDefault();
 	let table = "";
 
 	for (let row = 0; row < inputHeight; row++) {
@@ -71,21 +70,19 @@ function reset(gridWidth, gridHeight){
 
 
 // Download to image
-saveButton.on('click', function() {
+function saveImage() {
 	html2canvas(pixelCanvas, {
 		onrendered: function (canvas) {
 			// Creates a new link for download
-			let imgageData = canvas.toDataURL('image/png');
-			let newData = imgageData.replace(/^data:image\/png/, 'data:application/octet-stream');
-
-			// Displays a link for download
-			savedImageBox.empty();
-			savedImageBox.append('\<a href=\"' + newData + '\"\>click here to download\<\/a\>');
-			savedImageBox.css({'display': 'block'});
-			savedImageBox.fadeIn(200).fadeOut(100).fadeIn(200);
+			let imageURI = canvas.toDataURL();
+			let myLink = document.createElement('a');
+			myLink.download = "yourart.png";
+			myLink.href = imageURI;
+			document.body.appendChild(myLink);
+			myLink.click();
 		}
 	});
-});
+}
 
 
 

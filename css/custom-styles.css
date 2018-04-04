@@ -278,6 +278,7 @@ button {
 
 .current-color-box p {
 	/*flex: 1;*/
+	text-align: right;
 	margin-right: 10px;
 }
 

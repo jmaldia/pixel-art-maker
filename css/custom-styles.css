@@ -263,6 +263,36 @@ button {
 	color: #16a085!important;
 }
 
+.current-color-box {
+	padding: 20px 15px 0 0;
+	box-sizing: border-box;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-family: arial;
+	font-size: 12px;
+	font-weight: 600;
+	text-transform: uppercase;
+	text-align: center;
+}
+
+.current-color-box p {
+	/*flex: 1;*/
+	margin-right: 10px;
+}
+
+.current-color {
+	/*flex: 1;*/
+	max-width: 30px;
+	max-height: 30px;
+	min-width: 30px;
+	min-height: 30px;
+	width: 30px;
+	height: 30px;
+	border-radius: 50%;
+	background-color: #000000;
+}
+
 
 
 

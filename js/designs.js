@@ -19,6 +19,7 @@
 
 // jQuery variables
 const sizePicker = $("#sizePicker");
+const currentColor = $('.current-color')
 const small = $("#small");
 const medium = $("#medium");
 const large = $("#large");
@@ -136,6 +137,8 @@ $(document).ready(function() {
 	$('.color').on('focus', function() {
 		gridColor = $(this).val();
 		$(this).fadeIn(100).fadeOut(100).fadeIn(100); // Makes the box flash
+
+		currentColor.css({'background-color': gridColor});
 	});
 
 	// Calls on the reset function when Reset button is clicked

@@ -80,10 +80,34 @@
                     <input class="color carrot" type="text" name="carrot" value="#e67e22" >
                     <input class="color alizarin" type="text" name="alizarin" value="#e74c3c" >
                 </div>
+
+                
                 <div class="current-color-box">
-                    <p>Current<br> color</p><div class="current-color"></div>
+                    <p>Current color</p><div class="current-color"></div>
                 </div>
-            </div>
+
+
+                <!-- Range -->
+                <div class="range-slider">
+                    <div class="range-colors">
+                        <span class="range-slider-text">R</span>
+                        <input class="range-slider-range" id="slider-red" type="range" value="0" min="0" max="255">
+                        <span class="range-slider-value">0</span>
+                    </div>
+
+                    <div class="range-colors">
+                        <span class="range-slider-text">G</span>
+                        <input class="range-slider-range" id="slider-green" type="range" value="0" min="0" max="255">
+                        <span class="range-slider-value">0</span>
+                    </div>
+
+                    <div class="range-colors">
+                        <span class="range-slider-text">B</span>
+                        <input class="range-slider-range" id="slider-blue" type="range" value="0" min="0" max="255">
+                        <span class="range-slider-value">0</span>
+                    </div>
+                </div>
+             </div>
 
             <div class="label">
                 <h2>Clear Canvas</h2>  
@@ -110,9 +134,9 @@
     </div>
 
     <div id="dialog-confirm" title="Reset the Entire Grid?">
-      <p><span class="ui-icon ui-icon-alert"></p>
+        <p><span class="ui-icon ui-icon-alert"></span></p>
     
-        </span>This will clear all your work and cannot be recovered. Are you sure?</p>
+        </span>This will clear all your work and cannot be recovered. Are you sure?</span></p>
     </div>
  
 
@@ -124,5 +148,7 @@
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.min.js"></script>
     <script src="js/designs.js"></script>
+
+    
 </body>
 </html>

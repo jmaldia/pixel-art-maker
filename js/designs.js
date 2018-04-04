@@ -178,4 +178,24 @@ $(document).ready(function() {
 	$('#erase').click(function() {
 		$('td').trigger('eraseWork');
 	});
+
+
+	$('.range-colors').on('change', function(){
+		let red = $('#slider-red').val();
+		let green = $('#slider-green').val();
+		let blue = $('#slider-blue').val();
+		gridColor = `rgb(${red}, ${green}, ${blue})`
+
+		console.log(`rgb(${red}, ${green}, ${blue})`);
+		console.log($(this).find('.range-slider-range').val());
+		$(this).find('.range-slider-value').html($(this).find('.range-slider-range').val());
+
+		currentColor.css({'background-color': `${gridColor}`});
+
+	});
+
+
+
+
+
 });

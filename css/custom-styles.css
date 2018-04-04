@@ -294,8 +294,38 @@ button {
 	background-color: #000000;
 }
 
+/*Range Slider*/
+.range-colors {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.range-slider {
+	margin-top: 18px;
+	font-family: arial;
+	font-size: 14px;
+	font-weight: 600;
+	color: #2d3436;
+	text-transform: uppercase;
+}
+
+.range-slider input {
+	width: 100%;
+	background-color: #d7dcdf;
+	border: none;
+	-webkit-appearance: none;
+    height: 10px;
+    border-radius: 5px;
+    outline: none;
+    padding: 0;
+    margin: 7px;
+}
 
 
+.range-slider-text, .range-slider-value {
+	width: 30px;
+}
 
 
 

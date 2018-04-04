@@ -322,6 +322,17 @@ button {
     margin: 7px;
 }
 
+.range-slider input[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 17px;
+    height: 17px;
+    border: none;
+    border-radius: 50%;
+    background: #3498db;
+    cursor: pointer;
+    transition: background .15s ease-in-out;
+}
+
 
 .range-slider-text, .range-slider-value {
 	width: 30px;

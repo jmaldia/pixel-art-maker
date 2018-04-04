@@ -101,7 +101,7 @@ $(document).ready(function() {
 		gridHeight = small.find("input[name='width']").val();//$(inputHeight);
 		gridWidth = small.find("input[name='height']").val();//$(inputWidth);
 
-		makeGrid(gridWidth, gridHeight);
+		reset(gridWidth, gridHeight);
 	});
 
 	$('#button-medium').on('click', function() {
@@ -109,7 +109,7 @@ $(document).ready(function() {
 		gridHeight = medium.find("input[name='width']").val();//$(inputHeight);
 		gridWidth = medium.find("input[name='height']").val();//$(inputWidth);
 
-		makeGrid(gridWidth, gridHeight);
+		reset(gridWidth, gridHeight);
 	});
 
 	$('#button-large').on('click', function() {
@@ -117,7 +117,7 @@ $(document).ready(function() {
 		gridHeight = large.find("input[name='width']").val();//$(inputHeight);
 		gridWidth = large.find("input[name='height']").val();//$(inputWidth);
 
-		makeGrid(gridWidth, gridHeight);
+		reset(gridWidth, gridHeight);
 	});
 
 	$('#button').on('click', function() {
@@ -125,7 +125,7 @@ $(document).ready(function() {
 		gridHeight = sizePicker.find("input[name='width']").val();//$(inputHeight);
 		gridWidth = sizePicker.find("input[name='height']").val();//$(inputWidth);
 
-		makeGrid(gridWidth, gridHeight);
+		reset(gridWidth, gridHeight);
 	});
 
 

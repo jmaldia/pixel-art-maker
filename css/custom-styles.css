@@ -137,6 +137,84 @@ table, td, tr {
 .carrot { background-color: #e67e22; }
 .alizarin { background-color: #e74c3c; }	
 
+.current-color-box {
+	padding: 20px 15px 0 0;
+	box-sizing: border-box;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-family: arial;
+	font-size: 12px;
+	font-weight: 600;
+	text-transform: uppercase;
+	text-align: center;
+}
+
+.current-color-box p {
+	/*flex: 1;*/
+	text-align: right;
+	margin-right: 10px;
+}
+
+.current-color {
+	/*flex: 1;*/
+	max-width: 30px;
+	max-height: 30px;
+	min-width: 30px;
+	min-height: 30px;
+	width: 30px;
+	height: 30px;
+	border-radius: 50%;
+	background-color: #000000;
+}
+
+/*Range Slider*/
+.range-colors {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.range-slider {
+	margin-top: 18px;
+	font-family: arial;
+	font-size: 14px;
+	font-weight: 600;
+	color: #2d3436;
+	text-transform: uppercase;
+}
+
+.range-slider input {
+	width: 100%;
+	background-color: #d7dcdf;
+	border: none;
+	-webkit-appearance: none;
+    height: 10px;
+    border-radius: 5px;
+    outline: none;
+    padding: 0;
+    margin: 7px;
+}
+
+.range-slider input[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 17px;
+    height: 17px;
+    border: none;
+    border-radius: 50%;
+    background: #3498db;
+    cursor: pointer;
+    transition: background .15s ease-in-out;
+}
+
+
+.range-slider-text, .range-slider-value {
+	width: 30px;
+}
+
+
+
+
 
 /*Canvas Size*/
 
@@ -261,81 +339,6 @@ button {
 .saved-image-box a {
 	font-family: arial;
 	color: #16a085!important;
-}
-
-.current-color-box {
-	padding: 20px 15px 0 0;
-	box-sizing: border-box;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	font-family: arial;
-	font-size: 12px;
-	font-weight: 600;
-	text-transform: uppercase;
-	text-align: center;
-}
-
-.current-color-box p {
-	/*flex: 1;*/
-	text-align: right;
-	margin-right: 10px;
-}
-
-.current-color {
-	/*flex: 1;*/
-	max-width: 30px;
-	max-height: 30px;
-	min-width: 30px;
-	min-height: 30px;
-	width: 30px;
-	height: 30px;
-	border-radius: 50%;
-	background-color: #000000;
-}
-
-/*Range Slider*/
-.range-colors {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-}
-
-.range-slider {
-	margin-top: 18px;
-	font-family: arial;
-	font-size: 14px;
-	font-weight: 600;
-	color: #2d3436;
-	text-transform: uppercase;
-}
-
-.range-slider input {
-	width: 100%;
-	background-color: #d7dcdf;
-	border: none;
-	-webkit-appearance: none;
-    height: 10px;
-    border-radius: 5px;
-    outline: none;
-    padding: 0;
-    margin: 7px;
-}
-
-.range-slider input[type=range]::-webkit-slider-thumb {
-    -webkit-appearance: none;
-    width: 17px;
-    height: 17px;
-    border: none;
-    border-radius: 50%;
-    background: #3498db;
-    cursor: pointer;
-    transition: background .15s ease-in-out;
-}
-
-
-.range-slider-text, .range-slider-value {
-	width: 30px;
 }
 
 

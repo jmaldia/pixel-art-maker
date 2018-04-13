@@ -19,7 +19,7 @@
 
 // jQuery variables
 const sizePicker = $("#sizePicker");
-const currentColor = $('.current-color')
+const currentColor = $('.current-color');
 const small = $("#small");
 const medium = $("#medium");
 const large = $("#large");
@@ -37,9 +37,9 @@ function makeGrid(inputWidth, inputHeight) {
 		$('.row').remove();
 		table += "<tr class='row'>";
 		for (let column = 0; column < inputWidth; column++) {
-			if (column % 2 === 0 && row % 2 == 1) {
+			if (column % 2 === 0 && row % 2 === 1) {
 				table += "<td class='grey'></td>";
-			} else if (column % 2 === 1 && row % 2 == 0) {
+			} else if (column % 2 === 1 && row % 2 === 0) {
 				table += "<td class='grey'></td>";
 			} else {
 				table += "<td class='white'></td>";
@@ -186,8 +186,6 @@ $(document).ready(function() {
 		let blue = $('#slider-blue').val();
 		gridColor = `rgb(${red}, ${green}, ${blue})`
 
-		console.log(`rgb(${red}, ${green}, ${blue})`);
-		console.log($(this).find('.range-slider-range').val());
 		$(this).find('.range-slider-value').html($(this).find('.range-slider-range').val());
 
 		currentColor.css({'background-color': `${gridColor}`});
